@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Results</h1>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Ambient Temperature (°C)</td>
+                <td><%= ambientTemp %></td>
+            </tr>
+            <tr>
+                <td>Module Temperature (°C)</td>
+                <td><%= moduleTemp %></td>
+            </tr>
+            <tr>
+                <td>Irradiance (W/m²)</td>
+                <td><%= irradiance %></td>
+            </tr>
+        </table>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
