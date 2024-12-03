@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Parameters</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Parameters</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Input Parameters</h1>
-        <form action="/submit" method="POST">
-            <label for="ambient-temp">Ambient Temperature (°C):</label>
-            <input type="number" id="ambient-temp" name="ambientTemp" required>
-            
-            <label for="module-temp">Module Temperature (°C):</label>
-            <input type="number" id="module-temp" name="moduleTemp" required>
-            
-            <label for="irradiance">Irradiance (W/m²):</label>
-            <input type="number" id="irradiance" name="irradiance" required>
-            
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+  <div class="container">
+    <h1>Plant Data Query</h1>
+    <form action="/submit" method="POST">
+      <label for="start_time">Start Time:</label>
+      <input type="datetime-local" id="start_time" name="start_time">
+
+      <label for="end_time">End Time:</label>
+      <input type="datetime-local" id="end_time" name="end_time">
+      <!-- <label for="start_time">Start Time:</label>
+<input type="time" id="start_time" name="start_time" min="00:00" max="23:59" required>
+
+<label for="end_time">End Time:</label>
+<input type="time" id="end_time" name="end_time" min="00:00" max="23:59" required> -->
+
+
+      <label for="ambient_temp">Ambient Temperature:</label>
+      <input type="number" id="ambient_temp" name="ambient_temp" step="0.01">
+
+      <label for="module_temp">Module Temperature:</label>
+      <input type="number" id="module_temp" name="module_temp" step="0.01">
+
+      <label for="irradiation">Irradiation:</label>
+      <input type="number" id="irradiation" name="irradiation" step="0.01">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </body>
 </html>
